@@ -7,3 +7,4 @@ Os arquivos com as resoluções normalmente seguem um padrão básico de nome, i
 Você pode testar os códigos em sua própria maquina, como também pode usar algum compilador online; [onlinegdb](https://www.onlinegdb.com/) ou [mycompiler.io](https://www.mycompiler.io/pt/online-c-compiler).
 
 **OBS:** Será bem-vinda qualquer contribuição que possa ajudar na melhoria dos códigos.
+**Ao criar esse repositório também estou aprendendo a mexer no GitHub, então, caso haja algum erro nas postagens dos exercícios ou no próprio repositório, aceito feedbacks para melhorias.**
