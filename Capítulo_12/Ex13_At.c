@@ -23,14 +23,15 @@ int main(){
         if(feof(StudentData)){
             break;
         }
-
         fscanf(StudentData, "%d", &Data.Matriculation);
-        fscanf(StudentData, "%s", Data.Name);
-        fscanf(StudentData, "%f %f %f", &Data.TestResults[0], &Data.TestResults[1], &Data.TestResults[2]); //Leio do arquivo
+        fgets(Data.Name, 30, StudentData);
+        for(int i = 0; i < 3; i++){
+            fscanf(StudentData, "%f", &Data.TestResults[i]);
+        }
     }
 
     printf("Matrícula: %d\n", Data.Matriculation);
-    printf("Nome: %s\n", Data.Name);
+    printf("Nome: %s", Data.Name);
     for(int i = 0; i < 3; i++){
         printf("%dº Nota: %.2f\n", (i+1), Data.TestResults[i]); 
     }
