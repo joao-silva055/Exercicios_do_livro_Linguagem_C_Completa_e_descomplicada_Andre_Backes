@@ -42,9 +42,9 @@ int main(){
         }
     }
 
-    printf("-Piores notas da 1º prova: %d-\n", pnp1);
-    printf("-Piores notas da 2º prova: %d-\n", pnp2);
-    printf("-Piores notas da 3º prova: %d-\n", pnp3);
+    printf("-Piores notas da 1ª prova: %d-\n", pnp1);
+    printf("-Piores notas da 2ª prova: %d-\n", pnp2);
+    printf("-Piores notas da 3ª prova: %d-\n", pnp3);
 
     return 0;
 }
