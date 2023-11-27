@@ -6,21 +6,24 @@ armazenada na mesma variavél. Em seguida, imprima a string invertida. */
 
 int main(){
 
-    char str[20], troca_posicao;
-    int limite;
+    char str[20], swap;
     
     printf("Digite uma string qualquer: ");
     fgets(str, 20, stdin);
 
-    limite = strlen(str)-2;
+    //Exclui a constante \n (New line) lida pelo comando fgets e 
+    //inclui o caractere especial \0 para indicar o fim da string.
+    str[strcspn(str, "\n")] = '\0';
 
-    for(int i = 0; i < limite; i++, limite--){
-        troca_posicao = str[i];
-        str[i] = str[limite];
-        str[limite] = troca_posicao;
+    int j = strlen(str) - 1;
+    for(int i = 0; i < j; i++, j--){
+        swap = str[i];
+        str[i] = str[j];
+        str[j] = swap;
     }
 
-    printf("%s", str);
+    printf("String invertida: %s\n", str);
 
     return 0;
 }
+//O código não funciona corretamente caso haja alguma letra acentuada.
