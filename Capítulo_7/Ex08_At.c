@@ -21,12 +21,10 @@ int main(){
     for(int i = 0; str1[i]!='\0'; i++){
         if(str2[0] == str1[i] && flag == 0){
             for(int j = 0; j < strlen(str2); j++){
-                if((str2[j] == str1[j+i]) && (flag == 0)){
-                    aux[j] = str1[j+i];
-                }
-                if(!strcmp(aux, str2)){
+                aux[j] = str1[j+i];
+            }
+            if(!strcmp(aux, str2)){
                     flag++;
-                }
             }
         }
     }
