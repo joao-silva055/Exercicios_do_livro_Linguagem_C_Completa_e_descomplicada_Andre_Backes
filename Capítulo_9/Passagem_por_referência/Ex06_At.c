@@ -4,34 +4,39 @@ Então A[i][j] = B[j][i]) */
 
 #include <stdio.h>
 #include <stdlib.h>
-#define SIZEMAX 3
-void mostra_matriz(int a[][SIZEMAX], int szmax){
-    int aux;
-    for(int i = 0; i < SIZEMAX; i++){
-        for(int j = 0; j < szmax; j++){
+#define SZ_MAX 5
+
+void TransposeMa(int Mb[][SZ_MAX]){
+    int swap;
+    for(int i = 0; i < SZ_MAX; i++){
+        for(int j = 0; j < SZ_MAX; j++){
             if(j >= i){
-                aux = a[i][j];
-                a[i][j] = a[j][i];
-                a[j][i] = aux;
+                swap = Mb[i][j];
+                Mb[i][j] = Mb[j][i];
+                Mb[j][i] = swap;
             }
-            printf("\t[%d]", a[i][j]);
         }
-        printf("\n");
     }
 }
 
 int main(){
 
-    int A[SIZEMAX][SIZEMAX];
+    int Ma[SZ_MAX][SZ_MAX], index = 1;
 
-    for(int i = 0; i < SIZEMAX; i++){
-        for(int j = 0; j < SIZEMAX; j++){
-            printf("Digite o valor da posição [%d][%d]: ", i, j);
-            scanf("%d", &A[i][j]);
+    for(int i = 0; i < SZ_MAX; i++){
+        for(int j = 0; j < SZ_MAX; j++){
+            Ma[i][j] = index++;
         }
     }
 
-    mostra_matriz(A, SIZEMAX);
+    TransposeMa(Ma);
+
+    for(int i = 0; i < SZ_MAX; i++){
+        for(int j = 0; j < SZ_MAX; j++){
+            printf("%3d  ", Ma[i][j]);
+        }
+        printf("\n");
+    }
 
     return 0;
 }
