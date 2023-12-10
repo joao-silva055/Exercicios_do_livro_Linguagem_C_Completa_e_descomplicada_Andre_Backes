@@ -2,23 +2,28 @@
 números de 1 a N. */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int somatorio_recursivo(int n){
+int Recursive_Sum(int n){
+
     if(n == 1){
         return 1;
+    }else{
+        return n + RecursiveSum(n - 1);
     }
-    return n + somatorio_recursivo(n - 1);
+
 }
 
 int main(){
 
-    int n, soma = 0, i;
-    printf("Digite quantos valores serão somados: ");
-    scanf("%d", &n);
+    int value, sum;
 
-    soma = somatorio_recursivo(n);
+    printf("Digite um valor: ");
+    scanf("%d", &value);
 
-    printf("A soma dos valores de 1 a N é de %d.\n", soma);
+    sum = RecursiveSum(value);
+
+    printf("A soma dos valores de 1 até %d é de %d.\n", value, sum);
 
     return 0;
 }
