@@ -2,25 +2,27 @@
 S = 1³ + 2³ + ... + n³ */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
-int soma_recursiva(int n, int soma){
-    if(n >= 0){
-        soma += (n*n*n);
-        soma_recursiva(n - 1, soma);
+int Sum_N_Cubic(int n){
+    if(n == 1){
+        return 1;
     }else{
-        return soma;
+        return pow(n, 3) + Sum_N_Cubic(n - 1);
     }
 }
 
 int main(){
 
-    int n, soma = 0;
-    printf("Digite a quantidade de números que deseja somar: ");
-    scanf("%d", &n);
+    int value, sum;
 
-    soma =  soma_recursiva(n, soma);
+    printf("Digite um valor: ");
+    scanf("%d", &value);
 
-    printf("A soma dos valores digitados elevado ao cubo é %d.\n", soma);
+    sum = Sum_N_Cubic(value);
+
+    printf("A soma dos primeiros %d cubos é de %d.\n", value, sum);
 
     return 0;
 }
