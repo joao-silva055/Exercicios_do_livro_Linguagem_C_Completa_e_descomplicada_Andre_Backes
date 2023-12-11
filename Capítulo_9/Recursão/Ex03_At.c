@@ -2,25 +2,29 @@
 naturais de 0 até N em ordem crescente */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-void imprime_naturais(int n){
+int Print_in_ascending_order(int n){
+
     if(n == 0){
-        printf("%d", n);
-        return;
+        //Caso base
+        return printf("%d\n", n);
     }else{
-        imprime_naturais(n - 1);
-        printf("%d", n);
+        //Interrompe a primeira chamada chamada; Inicio do loop
+        Print_in_ascending_order(n - 1);
+        //Só será executado depois de descarregar toda memória voltando a primeira chamada
+        printf("%d\n", n);
     }
 }
 
 int main(){
 
-    int n;
+    int value;
 
-    printf("Até qual valor deseja imprimir: ");
-    scanf("%d", &n);
+    printf("Digite um valor: ");
+    scanf("%d", &value);
 
-    imprime_naturais(n);
+    Print_in_ascending_order(value);
 
     return 0;
 }
