@@ -2,25 +2,23 @@
 naturais de 0 até N em ordem decrescente */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-void imprime_naturais(int n){
-     if(n == 0){
-        printf("%d", n);
-        return;
-    }else{
-        printf("%d", n);
-        imprime_naturais(--n);
+void Print_in_descending_order(int n){
+    if(n >= 0){
+        printf("%d\n", n);
+        Print_in_descending_order(n - 1);
     }
 }
 
 int main(){
 
-    int n, ctd = 0;
+    int value;
 
-    printf("Qual valor ira começar a contagem: ");
-    scanf("%d", &n);
+    printf("Digite um valor: ");
+    scanf("%d", &value);
 
-    imprime_naturais(n);
+    Print_in_descending_order(value);
 
     return 0;
 }
