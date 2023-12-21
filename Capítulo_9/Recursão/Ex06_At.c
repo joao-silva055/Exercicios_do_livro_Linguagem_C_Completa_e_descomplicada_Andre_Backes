@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-float media_vetor_recursivo(float *v, int szmax, int cttn){
+float media_vetor_recursivo(int *v, int szmax, int cttn){
     float soma;
     if(szmax == 0){
         return (float)v[szmax] / cttn;
@@ -13,7 +13,7 @@ float media_vetor_recursivo(float *v, int szmax, int cttn){
 
 int main(){
 
-    float vetor[] = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0};
+    int vetor[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     float media;
 
     media = media_vetor_recursivo(vetor, 9, 10);
