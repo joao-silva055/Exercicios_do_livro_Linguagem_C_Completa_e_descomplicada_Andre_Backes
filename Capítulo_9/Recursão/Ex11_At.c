@@ -1,4 +1,4 @@
-/* 11-Escreva uma função recursiva que receba uma valor inteiro e o retorne invertido. 
+/* 11-Escreva uma função recursiva que receba um valor inteiro e o retorne invertido. 
 Exemplo:
 Número lido: 123
 Número retornado: 321 */
